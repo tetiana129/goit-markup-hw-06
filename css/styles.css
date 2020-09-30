@@ -766,7 +766,7 @@
 
         .modal-item {
             display: flex;  
-            /*flex-direction: column;*/
+           
         }
         .modal-item:nth-child(-n + 4) {
             margin-bottom: 28px;           
@@ -775,37 +775,8 @@
         .modal-label {
             position: relative;
             display: block;
-            border-radius: 4px;  
-
-            transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .modal-label:hover,
-        .modal-label:focus {
-            border: 1px solid var(--accent-color);
-
-            outline-color: var(--accent-color);
-            outline-width: 0px;
-        }
-                 
-        .modal-label input:focus {
-            outline-color: var(--accent-color);
-            outline-width: 1px;
-        }
-
-        .modal-label input:focus + .form-icon {
-            fill: var(--accent-color);
-        }
-
-        .form-icon {
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .modal-label:hover .form-icon,
-        .modal-label:focus .form-icon {
-            fill: var(--accent-color);
-        }
-               
         .modal-label span,
         .modal-label-comment {
             position: absolute;
@@ -820,16 +791,25 @@
             transform: translateY(-120%);
         }
 
-        .modal-label input {
+        .modal-input {
             margin: 0;
             padding: 14px 15px 14px 42px;
             width: 448px;
             height: 40px;
             border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;            
+            border-radius: 4px;  
+            
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .modal-input:hover,
+        .modal-input:focus {
+            border-color: var(--accent-color);
+            outline-color: var(--accent-color);
+            outline-width: 0px;
         }
 
-        .modal-label svg {
+        .form-icon {
             position: absolute;
             display: inline-block;
             top: 50%;
@@ -837,7 +817,14 @@
             transform: translateY(-50%);
             
             fill: var(--title-text-color);
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
+       
+        .modal-input:focus + .form-icon,
+        .modal-input:hover + .form-icon {
+            fill: var(--accent-color);
+        }
+
         .form-icon-name {
             width: 12px;
             height: 12px;                    
