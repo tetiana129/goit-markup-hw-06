@@ -772,12 +772,6 @@
             margin-bottom: 28px;           
         }
 
-        
-        .modal-label input:focus {
-            outline-color: var(--accent-color);
-            outline-width: 1px;
-        }
-
         .modal-label {
             position: relative;
             display: block;
@@ -792,6 +786,15 @@
 
             outline-color: var(--accent-color);
             outline-width: 0px;
+        }
+                 
+        .modal-label input:focus {
+            outline-color: var(--accent-color);
+            outline-width: 1px;
+        }
+
+        .modal-label input:focus + .form-icon {
+            fill: var(--accent-color);
         }
 
         .form-icon {
