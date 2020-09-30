@@ -276,6 +276,7 @@
             box-sizing: border-box;
             background-color: var(--bgc-dark-grey);
             border-radius: 4px;
+            color: rgba(255, 255, 255, 0.6);
           
         }
           
@@ -771,6 +772,12 @@
             margin-bottom: 28px;           
         }
 
+        
+        .modal-label input:focus {
+            outline-color: var(--accent-color);
+            outline-width: 1px;
+        }
+
         .modal-label {
             position: relative;
             display: block;
@@ -782,6 +789,9 @@
         .modal-label:hover,
         .modal-label:focus {
             border: 1px solid var(--accent-color);
+
+            outline-color: var(--accent-color);
+            outline-width: 0px;
         }
 
         .form-icon {
@@ -813,8 +823,7 @@
             width: 448px;
             height: 40px;
             border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-            /*box-sizing: border-box;*/
+            border-radius: 4px;            
         }
 
         .modal-label svg {
@@ -828,7 +837,7 @@
         }
         .form-icon-name {
             width: 12px;
-            height: 12px;         
+            height: 12px;                    
         }
         .form-icon-phone {
             width: 13px;
@@ -839,12 +848,10 @@
             height: 12px;
         }
         .modal-item-comment {
-            margin-bottom: 20px;
-        }
-        .modal-item-comment {
             position: relative;
             display: flex;
             flex-direction: column;
+            margin-bottom: 20px;
         }
         .modal-item-comment .comment {
             width: 448px;
@@ -854,12 +861,19 @@
             border: 1px solid rgba(33, 33, 33, 0.2);
             box-sizing: border-box;
             border-radius: 4px;
-
-            font-size: 14px;            
+                     
             line-height: 1.14;
             letter-spacing: 0.01em;
+            color: var(--title-text-color);
+        }
+        .comment::placeholder {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+
             color: rgba(117, 117, 117, 0.5);
         }
+        
         .modal-item-checkbox {
             position: relative;
             padding-left: 12px;
@@ -895,15 +909,7 @@
             background-repeat: no-repeat;
             background-position: center;
         } 
-        /*.modal-check-input:focus + .modal-check-box {
-            background-image: url(../images/check.svg);
-            background-color: var(--accent-color);
-            border-radius: 2px;
-            fill: var(--withe-color);
-            background-repeat: no-repeat;
-            background-position: center;
-        } */
-
+     
         .modal-check-agreement {
             display: block;
             margin-left: 8px;
